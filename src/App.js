@@ -12,9 +12,7 @@ var inputStyles = {
 };
 
 var spanStyles = {
-  margin: "auto",
-  padding: "2rem",
-  fontSize: "3rem",
+  padding: "0 2rem",
   cursor: "pointer"
 };
 
@@ -23,12 +21,12 @@ var emojiDict = {
   "🦄": "Unicorn",
   "🐼": "Panda",
   "🐟": "Fish",
+  "🐱": "Cat",
   "🐞": "Lady Beetle",
   "🦉": "Owl",
   "🐇": "Rabbit",
   "🐶": "Dog",
-  "🦁": "Lion",
-  "🦢": "Swan"
+  "🦁": "Lion"
 };
 
 // get list of emojis from the dict
@@ -70,17 +68,19 @@ export default function App() {
 
       <div className="showMeaning">{emojiMeaning}</div>
 
-      {emojiList.map((item) => {
-        return (
-          <span
-            key={item}
-            style={spanStyles}
-            onClick={() => emojiClickHandler(item)}
-          >
-            {item}
-          </span>
-        );
-      })}
+      <div className="emojiContainer">
+        {emojiList.map((item) => {
+          return (
+            <span
+              key={item}
+              style={spanStyles}
+              onClick={() => emojiClickHandler(item)}
+            >
+              {item}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 }
