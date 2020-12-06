@@ -11,11 +11,11 @@ var inputStyles = {
   textAlign: "center"
 };
 
-var spanStyle = {
+var spanStyles = {
   margin: "auto",
-  padding: "1rem",
+  padding: "2rem",
   fontSize: "3rem",
-  cursor : "pointer"
+  cursor: "pointer"
 };
 
 var emojiDict = {
@@ -74,11 +74,10 @@ export default function App() {
         return (
           <span
             key={item}
-            style={spanStyle}
+            style={spanStyles}
             onClick={() => emojiClickHandler(item)}
           >
-            {" "}
-            {item}{" "}
+            {item}
           </span>
         );
       })}
