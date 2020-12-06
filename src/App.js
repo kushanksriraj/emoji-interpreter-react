@@ -14,7 +14,8 @@ var inputStyles = {
 var spanStyle = {
   margin: "auto",
   padding: "1rem",
-  fontSize: "3rem"
+  fontSize: "3rem",
+  cursor : "pointer"
 };
 
 var emojiDict = {
