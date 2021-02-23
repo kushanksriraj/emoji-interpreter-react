@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-var inputStyles = {
+const inputStyles = {
   marginTop: "1rem",
   padding: "1rem",
   width: "80%",
@@ -11,12 +11,12 @@ var inputStyles = {
   textAlign: "center"
 };
 
-var spanStyles = {
+const spanStyles = {
   padding: "0 2rem",
   cursor: "pointer"
 };
 
-var emojiDict = {
+const emojiDict = {
   "🦊": "Fox",
   "🦄": "Unicorn",
   "🐼": "Panda",
@@ -30,13 +30,13 @@ var emojiDict = {
 };
 
 // get list of emojis from the dict
-var emojiList = Object.keys(emojiDict);
+const emojiList = Object.keys(emojiDict);
 
 export default function App() {
   const [emojiMeaning, setEmojiMeaning] = useState("");
 
-  function inputEventHandler(event) {
-    var inputEmoji = event.target.value;
+  const inputEventHandler = (event) => {
+    const inputEmoji = event.target.value;
 
     // if text is cleared, reset the emojiMeaning to empty string
     if (inputEmoji === "") {
@@ -48,13 +48,13 @@ export default function App() {
         setEmojiMeaning("Sorry, this emoji is not in the database.");
       }
     }
-  }
+  };
 
-  function emojiClickHandler(item) {
-    var emojiClicked = item;
-    var meaning = emojiDict[emojiClicked];
+  const emojiClickHandler = (item) => {
+    const emojiClicked = item;
+    const meaning = emojiDict[emojiClicked];
     setEmojiMeaning(meaning);
-  }
+  };
 
   return (
     <div className="App">
